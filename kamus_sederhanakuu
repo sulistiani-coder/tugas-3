@@ -1,0 +1,49 @@
+# kamus sederhanakuuu ⊂⁠(⁠(⁠・⁠▽⁠・⁠)⁠)⁠⊃
+kamus = {
+    "pisang": "buah berwarna kuning",
+    "apel": "buah berwarna merah atau hijau",
+    "kucing": "hewan berbulu yang lucu",
+    "python": "bahasa pemrograman yang kadang gampang dan kadang susah banget dipelajari",
+    "sekolah": "tempat kita belajar dan ketemu temen"
+}
+
+while True:
+    print("\n===== KAMUS SEDERHANA =====")
+    print("1. Cari arti kata")
+    print("2. Tambah kata ke kamus")
+    print("3. Lihat semua kata")
+    print("4. Keluar")
+    pilihan = input("Pilih menu (1-4): ")
+
+    if pilihan == "1":
+        kata = input("Masukkan kata yang ingin dicari artinya bestiieee: ").lower()
+        if kata in kamus:
+            print(f"Arti dari '{kata}' adalah: {kamus[kata]}")
+        else:
+            print(f"Upss! Maafff kata '{kata}' ini belum ada di kamus bestiieee.")
+            tambah = input("Mau tambahin ke kamus bestiiee? (y/n): ").lower()
+            if tambah == "y":
+                arti = input(f"Tulis arti kata dari '{kata}' ini bestiieee: ")
+                kamus[kata] = arti
+                print("Yeayyy<(⁠≧⁠▽⁠≦⁠)>  kata barunya uda berhasil ditambahinnn!")
+
+    elif pilihan == "2":
+        kata_baru = input("Masukkan kata baru bestiiee: ").lower()
+        if kata_baru in kamus:
+            print("Ehh, ternyata kata ini udah ada di kamus bestiiee!")
+        else:
+            arti_baru = input(f"Masukkan arti dari '{kata_baru}' bestiiee: ")
+            kamus[kata_baru] = arti_baru
+            print("Kata dan artinya sudah berhasil ditambahinn bestiieee~")
+
+    elif pilihan == "3":
+        print("\n--- Isi kamus sekarang ---")
+        for kata, arti in kamus.items():
+            print(f"{kata}: {arti}")
+
+    elif pilihan == "4":
+        print("Dadaaa Bestieee!<⁠(⁠￣⁠︶⁠￣⁠)⁠>  Makasiii yaa uda mau make kamus ini.")
+        break
+
+    else:
+        print("Pilihan nggak valid bestiee(⁠.❛⁠ ⁠ᴗ⁠ ⁠❛⁠.⁠).  Coba lagi yaa~")
